@@ -1,0 +1,9 @@
+<div class="bg-grey-darker text-white h-{{ height }} relative mb-16 overflow-hidden" style="background-color: {{ background_color }}">
+    <img src="{{ background_image }}" alt="{{ background_image:alt or image:alt }}" class="object-cover mix-{{ blend_mode }} h-full w-full pin absolute opacity-50">
+    <div class="absolute h-full w-full z-10 flex items-center text-center">
+        <div class="flex-1 p-6">
+            <h1 class="font-heading font-normal leading-none text-5xl lg:text-7xl mb-8">{{ headline }}</h1>
+            <h2 class="font-subheading leading-tight text-2xl lg:text-4xl mb-6 max-w-md">{{ subhead }}</h2>
+        </div>
+    </div>
+</div>

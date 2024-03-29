@@ -1,0 +1,54 @@
+<div class="content bg-white pb-16 -mt-16">
+    {{ partial:hero :headline="title" :subhead="subtitle" height="screen" }}
+
+    {{ content }}
+        {{ if type == "hero_block" }}
+            {{ partial:hero }}
+        {{ /if }}
+
+        {{ if type == "text" }}
+            <div class="{{ if first }}mt-6 {{ /if }}px-4">
+                {{ text }}
+            </div>
+        {{ /if }}
+
+        {{ if type == "photo" }}
+            <img src="{{ image }}" class="mx-auto mt-8 {{ if !{{ image:alt }} }} mb-16 {{ /if }} block md:max-w-{{ size }} filter-{{ grayscale }}" alt="{{ image:alt }}">
+            {{ if image:alt }}<p class="text-base text-grey-dark text-center mt-4 mb-12 italic">{{ image:alt }}</p>{{ /if }}
+        {{ /if }}
+
+        {{ if type == "video" }}
+        <div class="max-w-xl mx-auto mt-8 mb-12">
+            <div class="video-embed">
+                {{ if video | is_embeddable }}
+                <iframe src="{{ video | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                {{ else }}
+                <video src="{{ video | embed_url }}"></video>
+                {{ /if }}
+            </div>
+        </div>
+        {{ /if }}
+
+        {{ if type == "two_col" }}
+        <div class="flex flex-wrap lg:max-w-xl mx-auto text-justify">
+            <div class="flex-1 min-w-xs p-8">
+                {{ col_one | markdown }}
+            </div>
+            <div class="flex-1 min-w-xs p-8">
+                {{ col_two | markdown }}
+            </div>
+        </div>
+        {{ /if }}
+
+        {{ if type == "gallery" }}
+        <div class="flex flex-wrap lg:max-w-xl mx-auto mt-8 mb-12 px-2 md:px-0">
+            <div class="columns-1 gap-2 md:columns-3 [&>img:not(:first-child)]:mt-2" >
+                {{ gallery }}
+                <img src="{{ glide:url fit="crop_focal" }}" alt="{{ alt }}">
+                {{ /gallery }}
+            </div>
+        </div>
+        {{ /if }}
+    {{ /content }}
+
+</div>

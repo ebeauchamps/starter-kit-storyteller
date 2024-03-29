@@ -1,0 +1,78 @@
+title: Image
+fields:
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Background Image'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+  -
+    handle: grayscale
+    field:
+      options:
+        none: 'Full colors'
+        grayscale: Grayscale
+      inline: false
+      cast_booleans: false
+      default: none
+      type: radio
+      display: Grayscale
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: background_color
+    field:
+      allow_any: true
+      type: color
+      display: 'Background Overlay Color'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: blend_mode
+    field:
+      options:
+        normal: Normal
+        screen: Screen
+        overlay: Overlay
+        lighten: Lighten
+        darken: Darken
+        multiply: Multiply
+        difference: Difference
+        exclusion: Exclusion
+        plus-lighter: Plus-lighter
+      display: 'Background Blend Mode'
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: normal
+      type: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50

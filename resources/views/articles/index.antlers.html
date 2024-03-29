@@ -1,0 +1,19 @@
+<div class="px-2 lg:px-5">
+    {{ collection:articles }}
+
+    <a class="content block mb-12 max-w-2xl mx-auto" href="{{ url }}">
+        <div class="bg-grey-darker text-white h-screen-sans-nav relative rounded lg:rounded-lg shadow-lg overflow-hidden" style="background-color: {{ background_color }}">
+            <img src="{{ background_image }}" alt="{{ background_image:alt or image:alt }}" class="mix-{{ blend_mode }} pin absolute opacity-50 object-cover h-full w-full">
+            <div class="absolute h-full w-full z-10 flex items-center text-center">
+                <div class="flex-1 p-6">
+                    <h6 class="font-subheading text-lg opacity-75 tracking-wider mb-4">{{ date }}</h6>
+                    <h1 class="font-heading font-normal leading-none text-5xl lg:text-7xl mb-8">{{ title }}</h1>
+                    <h2 class="font-subheading leading-tight text-2xl lg:text-4xl mb-6">{{ subtitle }}</h2>
+                </div>
+            </div>
+            {{ if tags }}<p class="absolute bottom-0 left-0 right-0 m-6 w-full text-center opacity-75 font-subheading">{{ tags | pluck('title') | sentence_list }}</p>{{ /if }}
+        </div>
+    </a>
+
+    {{ /collection:articles }}
+</div>

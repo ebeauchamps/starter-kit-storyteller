@@ -1,0 +1,13 @@
+export_paths:
+  - content
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/css
+  - resources/js
+  - resources/views
+  - public/build
+  - public/assets
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
+  - vite.config.js

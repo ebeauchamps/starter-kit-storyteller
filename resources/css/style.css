@@ -1,0 +1,120 @@
+p, ul, ol {
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    position: relative;
+    text-align: center;
+    font-family: 'Unica One';
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin: 1.5rem auto;
+}
+
+blockquote:after,
+blockquote:before {
+        content: "";
+        background-size: auto 3px;
+        display: block;
+        height: 3px;
+        width: 50%;
+        margin: 45px auto;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%232C185B' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    }
+}
+
+.content {
+    p, h2, h3, h4, h5, table, ul, ol, blockquote {
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    blockquote *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.content a {color: #fd2d78; }
+.content a:hover { color: #483B49; }
+
+.content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.pin {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.h-screen-sans-nav {
+    height: calc(100vh - 68px)
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.h-screen-1\/2 {
+    height: 50vh;
+}
+
+.h-800 {
+    height: 800px;
+}
+
+.mix-normal { mix-blend-mode: normal; }
+
+.mix-multiply { mix-blend-mode: multiply; }
+
+.mix-screen { mix-blend-mode: screen; }
+
+.mix-overlay { mix-blend-mode: overlay; }
+
+.mix-darken { mix-blend-mode: darken; }
+
+.mix-lighten { mix-blend-mode: lighten; }
+
+.mix-hard-light { mix-blend-mode: hard-light; }
+
+.mix-soft-light { mix-blend-mode: soft-light; }
+
+.mix-difference { mix-blend-mode: difference; }
+
+.mix-exclusion { mix-blend-mode: exclusion; }
+
+.mix-plus-lighter { mix-blend-mode: plus-lighter; }
+
+.filter-none {filter: none; }
+
+.filter-grayscale {filter: grayscale(100%); }

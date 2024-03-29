@@ -1,0 +1,363 @@
+title: Story
+tabs:
+  main:
+    display: 'Story Hero'
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
+          -
+            handle: subtitle
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Subtitle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: background_image
+            field: image.background_image
+            config:
+              width: 66
+          -
+            handle: grayscale
+            field: image.grayscale
+            config:
+              width: 33
+          -
+            handle: background_color
+            field: image.background_color
+          -
+            handle: blend_mode
+            field: image.blend_mode
+  story_content:
+    display: 'Story Content'
+    sections:
+      -
+        instructions: 'Please click inside the text area to choose your type of content or to enter any text.'
+        fields:
+          -
+            handle: content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - underline
+                - unorderedlist
+                - orderedlist
+                - quote
+                - anchor
+              smart_typography: true
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: trim
+              antlers: false
+              link_noopener: false
+              link_noreferrer: true
+              target_blank: true
+              sets:
+                groupe_1:
+                  display: Group1
+                  instructions: null
+                  icon: null
+                  sets:
+                    hero_block:
+                      display: 'Hero Block'
+                      instructions: null
+                      icon: favorite-award
+                      fields:
+                        -
+                          handle: background_image
+                          field: image.background_image
+                          config:
+                            width: 33
+                        -
+                          handle: height
+                          field:
+                            options:
+                              800: 800px
+                              screen-1/2: 'Half Screen'
+                              screen: 'Full Screen'
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            max_items: 1
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: Height
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                            width: 33
+                        -
+                          handle: grayscale
+                          field: image.grayscale
+                          config:
+                            width: 33
+                        -
+                          handle: background_color
+                          field: image.background_color
+                          config:
+                            width: 50
+                        -
+                          handle: blend_mode
+                          field: image.blend_mode
+                          config:
+                            width: 50
+                        -
+                          handle: headline
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Headline
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: subhead
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Subhead
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                    photo:
+                      display: Photo
+                      instructions: null
+                      icon: media-image-camera
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            mode: list
+                            container: assets
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: Image
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                            width: 75
+                        -
+                          handle: grayscale
+                          field: image.grayscale
+                          config:
+                            width: 25
+                        -
+                          handle: size
+                          field:
+                            options:
+                              'md lg:max-w-md xl:max-w-md': Inline
+                              'md lg:max-w-md xl:max-w-lg': Inline+
+                              'lg lg:max-w-xl xl:max-w-xl': Oversized
+                              'lg lg:max-w-xl xl:max-w-2xl': Oversized+
+                              full: 'Full Width'
+                            inline: true
+                            cast_booleans: false
+                            default: md
+                            type: radio
+                            display: Size
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                    two_col:
+                      display: 'Two Column Text'
+                      instructions: null
+                      icon: layout-two-columns
+                      fields:
+                        -
+                          handle: col_one
+                          field:
+                            restrict: false
+                            buttons:
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - quote
+                              - link
+                            automatic_line_breaks: true
+                            automatic_links: true
+                            escape_markup: false
+                            heading_anchors: false
+                            smartypants: false
+                            table_of_contents: false
+                            antlers: false
+                            type: markdown
+                            display: 'First column'
+                            width: 50
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: col_two
+                          field:
+                            restrict: false
+                            buttons:
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - quote
+                              - link
+                            automatic_line_breaks: true
+                            automatic_links: true
+                            escape_markup: false
+                            heading_anchors: false
+                            smartypants: false
+                            table_of_contents: false
+                            antlers: false
+                            type: markdown
+                            display: 'Second column'
+                            width: 50
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                    video:
+                      display: Video
+                      instructions: null
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          handle: video
+                          field:
+                            type: video
+                            display: Video
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                    gallery:
+                      display: Gallery
+                      instructions: null
+                      icon: dashboard-layout-2
+                      fields:
+                        -
+                          handle: gallery
+                          field:
+                            min_files: 3
+                            mode: list
+                            container: assets
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: Gallery
+                            instructions: 'Choose or upload at least 3 images.'
+                            listable: true
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              always_show_set_button: true
+              collapse: false
+              previews: true
+              type: bard
+              display: Content
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              instructions: 'Please click inside the content area to choose your type of content or to enter any text.'
+              link_collections:
+                - articles
+  sidebar:
+    display: Tags
+    sections:
+      -
+        fields:
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: default
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              create: true
+              hide_display: false
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: section_title
+            field:
+              input_type: text
+              default: Stories
+              antlers: false
+              type: text
+              display: 'Section Title'
+              listable: hidden
+              instructions_position: above
+              visibility: hidden
+              replicator_preview: false
+              hide_display: false
+              validate:
+                - sometimes

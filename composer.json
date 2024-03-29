@@ -1,0 +1,9 @@
+{
+    "name": "my-vendor-name/path",
+    "extra": {
+        "statamic": {
+            "name": "Path",
+            "description": "Path starter kit"
+        }
+    }
+}

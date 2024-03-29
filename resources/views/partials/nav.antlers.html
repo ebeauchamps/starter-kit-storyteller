@@ -1,0 +1,12 @@
+<nav class="text-center relative p-4">
+    <a href="/" class="absolute top-0 left-0 m-4 pt-2 z-50 no-underline text-white opacity-75 hover:opacity-100 font-subheading text-xs md:text-xl">
+        {{ settings:site_name ?? "storyteller" }}
+    </a>
+    <a href="/" class="relative z-50 no-underline text-white opacity-75 hover:opacity-100 font-heading font-normal text-sm md:text-2xl">
+        {{ section_title or title }}
+    </a>
+</nav>
+
+    <a href="/tags" class="absolute top-0 right-0 m-4 z-50 opacity-75 hover:opacity-100">
+        {{ svg src="/assets/img/tags.svg" }}
+    </a>

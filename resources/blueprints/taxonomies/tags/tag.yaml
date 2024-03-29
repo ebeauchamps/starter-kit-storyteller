@@ -1,0 +1,15 @@
+title: Tag
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              display: Title
+              type: text
+              required: true
+              validate:
+                - required

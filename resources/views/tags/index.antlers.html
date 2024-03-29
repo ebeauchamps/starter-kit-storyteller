@@ -1,0 +1,13 @@
+---
+title: Tags
+---
+
+<div class="content min-h-screen mb-6 p-16 bg-white text-3xl lg:text-4xl font-subheading leading-tight text-center">
+    {{ taxonomy:tags }}
+        {{ if ! terms }}
+            <h2>Oh. Aucun tag pour le moment.</h2>
+        {{ else }}
+                <a href="{{ url }}">{{ title }}</a><br>
+        {{ /if }}
+    {{ /taxonomy:tags }}
+</div>

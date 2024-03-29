@@ -1,0 +1,20 @@
+title: Asset
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: alt
+            field:
+              display: 'Alt text'
+              type: text
+              instructions: "Image description"
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false

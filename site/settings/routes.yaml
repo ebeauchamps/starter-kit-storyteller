@@ -1,6 +1,0 @@
-collections:
-  articles: '/articles/{slug}'
-taxonomies:
-  topics: '/articles/topics/{slug}'
-routes:
-  /articles/topics: topics
