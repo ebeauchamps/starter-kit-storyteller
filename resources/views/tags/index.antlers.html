@@ -4,8 +4,8 @@ title: Tags
 
 <div class="content min-h-screen mb-6 p-16 bg-white text-3xl lg:text-4xl font-subheading leading-tight text-center">
     {{ taxonomy:tags }}
-        {{ if ! terms }}
-            <h2>Oh. Aucun tag pour le moment.</h2>
+        {{ if ! terms or entries_count == 0 }}
+            <h2>Aw. No tags.</h2>
         {{ else }}
                 <a href="{{ url }}">{{ title }}</a><br>
         {{ /if }}
