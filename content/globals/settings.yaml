@@ -1,4 +1,6 @@
 title: Settings
 data:
   site_name: Storyteller
+  website_short_description: 'My short stories I would like to tell you about'
+  website_allow_pinterest: true
   site_background_image: efe-kurnaz-315384.jpg

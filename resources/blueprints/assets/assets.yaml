@@ -10,7 +10,7 @@ tabs:
             field:
               display: 'Alt text'
               type: text
-              instructions: "Image description"
+              instructions: 'Image description'
               instructions_position: above
               listable: hidden
               visibility: visible
